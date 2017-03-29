@@ -6,9 +6,9 @@
 //  Copyright © 2017 Gleb Karpushkin. All rights reserved.
 //
 
-public final class BPMAlanyzer {
+public final class BPMAnalyzer {
     
-    public static let core = BPMAlanyzer()
+    public static let core = BPMAnalyzer()
     
     public func getBpmFrom(_ url: URL) -> String {
         return Superpowered().offlineAnalyze(url)

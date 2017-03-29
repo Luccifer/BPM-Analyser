@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     func getTestBPM() -> String {
         guard let filePath = Bundle.main.path(forResource: "TestMusic", ofType: "m4a"),
             let url = URL(string: filePath) else {return "error occured, check fileURL"}
-        return BPMAlanyzer.core.getBpmFrom(url)
+        return BPMAnalyzer.core.getBpmFrom(url)
     }
 
 }
