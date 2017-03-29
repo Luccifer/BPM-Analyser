@@ -1,0 +1,388 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE8E08711E8BE1B600FEC80C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8E08701E8BE1B600FEC80C /* AppDelegate.swift */; };
+		BE8E08731E8BE1B600FEC80C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8E08721E8BE1B600FEC80C /* ViewController.swift */; };
+		BE8E08761E8BE1B600FEC80C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE8E08741E8BE1B600FEC80C /* Main.storyboard */; };
+		BE8E08781E8BE1B600FEC80C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE8E08771E8BE1B600FEC80C /* Assets.xcassets */; };
+		BE8E087B1E8BE1B600FEC80C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE8E08791E8BE1B600FEC80C /* LaunchScreen.storyboard */; };
+		BE8E088E1E8BE21400FEC80C /* Superpowered.mm in Sources */ = {isa = PBXBuildFile; fileRef = BE8E08881E8BE21400FEC80C /* Superpowered.mm */; };
+		BE8E088F1E8BE21400FEC80C /* libSuperpoweredAudioIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8E088C1E8BE21400FEC80C /* libSuperpoweredAudioIOS.a */; };
+		BE8E08911E8BE21900FEC80C /* BMPAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8E08901E8BE21900FEC80C /* BMPAnalyzer.swift */; };
+		BE8E08961E8BE22900FEC80C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8E08951E8BE22900FEC80C /* AVFoundation.framework */; };
+		BE8E08981E8BE22E00FEC80C /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8E08971E8BE22E00FEC80C /* CoreMedia.framework */; };
+		BE8E089A1E8BE23B00FEC80C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8E08991E8BE23B00FEC80C /* AudioToolbox.framework */; };
+		BE8E089C1E8BE2BF00FEC80C /* TestMusic.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BE8E089B1E8BE2BF00FEC80C /* TestMusic.m4a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BE8E086D1E8BE1B600FEC80C /* BPMAnalyser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BPMAnalyser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE8E08701E8BE1B600FEC80C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BE8E08721E8BE1B600FEC80C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BE8E08751E8BE1B600FEC80C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BE8E08771E8BE1B600FEC80C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BE8E087A1E8BE1B600FEC80C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BE8E087C1E8BE1B600FEC80C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE8E08831E8BE1DE00FEC80C /* BPMAnalyser-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BPMAnalyser-Bridging-Header.h"; sourceTree = "<group>"; };
+		BE8E08881E8BE21400FEC80C /* Superpowered.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Superpowered.mm; sourceTree = "<group>"; };
+		BE8E08891E8BE21400FEC80C /* SuperpoweredDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperpoweredDecoder.h; sourceTree = "<group>"; };
+		BE8E088A1E8BE21400FEC80C /* SuperpoweredSimple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperpoweredSimple.h; sourceTree = "<group>"; };
+		BE8E088B1E8BE21400FEC80C /* SuperpoweredAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperpoweredAnalyzer.h; sourceTree = "<group>"; };
+		BE8E088C1E8BE21400FEC80C /* libSuperpoweredAudioIOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSuperpoweredAudioIOS.a; sourceTree = "<group>"; };
+		BE8E088D1E8BE21400FEC80C /* BPMAnalyzer-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BPMAnalyzer-Bridging-Header.h"; sourceTree = "<group>"; };
+		BE8E08901E8BE21900FEC80C /* BMPAnalyzer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMPAnalyzer.swift; sourceTree = "<group>"; };
+		BE8E08931E8BE22600FEC80C /* MediaToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaToolbox.framework; path = System/Library/Frameworks/MediaToolbox.framework; sourceTree = SDKROOT; };
+		BE8E08951E8BE22900FEC80C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BE8E08971E8BE22E00FEC80C /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		BE8E08991E8BE23B00FEC80C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		BE8E089B1E8BE2BF00FEC80C /* TestMusic.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = TestMusic.m4a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE8E086A1E8BE1B600FEC80C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE8E089A1E8BE23B00FEC80C /* AudioToolbox.framework in Frameworks */,
+				BE8E08981E8BE22E00FEC80C /* CoreMedia.framework in Frameworks */,
+				BE8E08961E8BE22900FEC80C /* AVFoundation.framework in Frameworks */,
+				BE8E088F1E8BE21400FEC80C /* libSuperpoweredAudioIOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE8E08641E8BE1B600FEC80C = {
+			isa = PBXGroup;
+			children = (
+				BE8E086F1E8BE1B600FEC80C /* BPMAnalyser */,
+				BE8E086E1E8BE1B600FEC80C /* Products */,
+				BE8E08921E8BE22600FEC80C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BE8E086E1E8BE1B600FEC80C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE8E086D1E8BE1B600FEC80C /* BPMAnalyser.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE8E086F1E8BE1B600FEC80C /* BPMAnalyser */ = {
+			isa = PBXGroup;
+			children = (
+				BE8E08821E8BE1C200FEC80C /* src */,
+				BE8E08701E8BE1B600FEC80C /* AppDelegate.swift */,
+				BE8E08721E8BE1B600FEC80C /* ViewController.swift */,
+				BE8E08741E8BE1B600FEC80C /* Main.storyboard */,
+				BE8E08771E8BE1B600FEC80C /* Assets.xcassets */,
+				BE8E08791E8BE1B600FEC80C /* LaunchScreen.storyboard */,
+				BE8E087C1E8BE1B600FEC80C /* Info.plist */,
+				BE8E08831E8BE1DE00FEC80C /* BPMAnalyser-Bridging-Header.h */,
+				BE8E089B1E8BE2BF00FEC80C /* TestMusic.m4a */,
+			);
+			path = BPMAnalyser;
+			sourceTree = "<group>";
+		};
+		BE8E08821E8BE1C200FEC80C /* src */ = {
+			isa = PBXGroup;
+			children = (
+				BE8E08901E8BE21900FEC80C /* BMPAnalyzer.swift */,
+				BE8E08861E8BE1F100FEC80C /* Superpower */,
+			);
+			name = src;
+			path = ../src;
+			sourceTree = "<group>";
+		};
+		BE8E08861E8BE1F100FEC80C /* Superpower */ = {
+			isa = PBXGroup;
+			children = (
+				BE8E08881E8BE21400FEC80C /* Superpowered.mm */,
+				BE8E08891E8BE21400FEC80C /* SuperpoweredDecoder.h */,
+				BE8E088A1E8BE21400FEC80C /* SuperpoweredSimple.h */,
+				BE8E088B1E8BE21400FEC80C /* SuperpoweredAnalyzer.h */,
+				BE8E088C1E8BE21400FEC80C /* libSuperpoweredAudioIOS.a */,
+				BE8E088D1E8BE21400FEC80C /* BPMAnalyzer-Bridging-Header.h */,
+			);
+			path = Superpower;
+			sourceTree = "<group>";
+		};
+		BE8E08921E8BE22600FEC80C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE8E08991E8BE23B00FEC80C /* AudioToolbox.framework */,
+				BE8E08971E8BE22E00FEC80C /* CoreMedia.framework */,
+				BE8E08951E8BE22900FEC80C /* AVFoundation.framework */,
+				BE8E08931E8BE22600FEC80C /* MediaToolbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BE8E086C1E8BE1B600FEC80C /* BPMAnalyser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE8E087F1E8BE1B600FEC80C /* Build configuration list for PBXNativeTarget "BPMAnalyser" */;
+			buildPhases = (
+				BE8E08691E8BE1B600FEC80C /* Sources */,
+				BE8E086A1E8BE1B600FEC80C /* Frameworks */,
+				BE8E086B1E8BE1B600FEC80C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BPMAnalyser;
+			productName = BPMAnalyser;
+			productReference = BE8E086D1E8BE1B600FEC80C /* BPMAnalyser.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BE8E08651E8BE1B600FEC80C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Gleb Karpushkin";
+				TargetAttributes = {
+					BE8E086C1E8BE1B600FEC80C = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = QHQL7836SK;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = BE8E08681E8BE1B600FEC80C /* Build configuration list for PBXProject "BPMAnalyser" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BE8E08641E8BE1B600FEC80C;
+			productRefGroup = BE8E086E1E8BE1B600FEC80C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BE8E086C1E8BE1B600FEC80C /* BPMAnalyser */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BE8E086B1E8BE1B600FEC80C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE8E087B1E8BE1B600FEC80C /* LaunchScreen.storyboard in Resources */,
+				BE8E08781E8BE1B600FEC80C /* Assets.xcassets in Resources */,
+				BE8E089C1E8BE2BF00FEC80C /* TestMusic.m4a in Resources */,
+				BE8E08761E8BE1B600FEC80C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BE8E08691E8BE1B600FEC80C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE8E088E1E8BE21400FEC80C /* Superpowered.mm in Sources */,
+				BE8E08911E8BE21900FEC80C /* BMPAnalyzer.swift in Sources */,
+				BE8E08731E8BE1B600FEC80C /* ViewController.swift in Sources */,
+				BE8E08711E8BE1B600FEC80C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BE8E08741E8BE1B600FEC80C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE8E08751E8BE1B600FEC80C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BE8E08791E8BE1B600FEC80C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE8E087A1E8BE1B600FEC80C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BE8E087D1E8BE1B600FEC80C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BE8E087E1E8BE1B600FEC80C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BE8E08801E8BE1B600FEC80C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = QHQL7836SK;
+				INFOPLIST_FILE = BPMAnalyser/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/src/Superpower",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.eyerise.BMPAnalyzer.BPMAnalyser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BPMAnalyser/BPMAnalyser-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		BE8E08811E8BE1B600FEC80C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = QHQL7836SK;
+				INFOPLIST_FILE = BPMAnalyser/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/src/Superpower",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.eyerise.BMPAnalyzer.BPMAnalyser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BPMAnalyser/BPMAnalyser-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE8E08681E8BE1B600FEC80C /* Build configuration list for PBXProject "BPMAnalyser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE8E087D1E8BE1B600FEC80C /* Debug */,
+				BE8E087E1E8BE1B600FEC80C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE8E087F1E8BE1B600FEC80C /* Build configuration list for PBXNativeTarget "BPMAnalyser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE8E08801E8BE1B600FEC80C /* Debug */,
+				BE8E08811E8BE1B600FEC80C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BE8E08651E8BE1B600FEC80C /* Project object */;
+}
