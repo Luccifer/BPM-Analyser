@@ -9,25 +9,25 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(getTestBPM())
-        
+        print(String(describing: getTestBPM()))
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    func getTestBPM() -> String {
+    
+    func getTestBPM() -> String? {
         guard let filePath = Bundle.main.path(forResource: "TestMusic", ofType: "m4a"),
             let url = URL(string: filePath) else {return "error occured, check fileURL"}
-        return BPMAnalyzer.core.getBpmFrom(url)
+        var bpm: String?
+        bpm =  BPMAnalyzer.core.getBpmFrom(url, completion: nil)
+        return bpm
     }
-
+    
 }
-
