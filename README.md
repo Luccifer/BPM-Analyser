@@ -1,5 +1,6 @@
 # BPM-Analyser
 Analyser BPM in Swift for your music/sounds/records, whatever..
+Powered with [Superpowered](http://superpowered.com)
 
 # How To:
 ## Add theese frameworks to your Linked Frameworks and Libraries
