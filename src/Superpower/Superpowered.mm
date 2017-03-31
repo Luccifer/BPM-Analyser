@@ -73,7 +73,7 @@
     if (notes) free(notes);
     if (overviewWaveform) free(overviewWaveform);
     
-    NSString *retStr = [NSString stringWithFormat:@"%f", bpm];
+    NSString *retStr = [NSString stringWithFormat:@"BPM is %f, average loudness is %f db, peak volume is %f", bpm, loudpartsAverageDecibel, peakDecibel];
     return retStr;
 }
 
