@@ -1,4 +1,8 @@
 # BPM-Analyser
+
+![](https://img.shields.io/badge/swift-3.0-green.svg)
+![](https://img.shields.io/badge/platform-ios-gray.svg)
+
 Analyser BPM in Swift for your music/sounds/records, whatever..
 Powered with [Superpowered](http://superpowered.com)
 
