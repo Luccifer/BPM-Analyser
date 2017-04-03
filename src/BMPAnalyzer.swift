@@ -11,6 +11,7 @@ public final class BPMAnalyzer {
     public static let core = BPMAnalyzer()
     
     public func getBpmFrom(_ url: URL, completion: ((String) -> ())?) -> String {
+        completion!(Superpowered().offlineAnalyze(url))
         return Superpowered().offlineAnalyze(url)
     }
     
