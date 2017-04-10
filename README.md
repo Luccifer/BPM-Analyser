@@ -64,3 +64,5 @@ Cause I can :D But in fact, I did't find any libs/frameworks to get BPM from med
 
 # WHY Superpowered?
 Cause it is the [fastest lib I have found](http://superpowered.com)
+
+# Feel FREE to PR or contribuctions/issues/remarks
