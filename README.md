@@ -7,14 +7,16 @@ Analyser BPM in Swift for your music/sounds/records, whatever..
 Powered with [Superpowered](http://superpowered.com)
 
 # How To:
-## Add theese frameworks to your Linked Frameworks and Libraries
+
+## Copy theese files to your project:
+- BMPAnalyzer.swift
+- Superpower directory
+
+## Also add theese frameworks to your Linked Frameworks and Libraries
 - Add AudioToolbox.framework
 - CoreMedia.framework
 - AVFoundation
-- libSuperpoweredAudioIOS.a
-## Also copy theese files to your project:
-- BMPAnalyzer.swift
-- Superpower directory
+- libSuperpoweredAudioIOS.a (From repo: /src/Superpowered, you added it to project in the previous step
 
 ## In your code implementation you can call Singleton method by:
 ```swift
