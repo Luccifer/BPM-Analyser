@@ -24,7 +24,7 @@ Powered with [Superpowered](http://superpowered.com)
 ```
 Example:
 ```swift
-let filePath = Bundle.main.path(forResource: "TestMusic", ofType: "m4a"),
+guard let filePath = Bundle.main.path(forResource: "TestMusic", ofType: "m4a"),
 let url = URL(string: filePath) else {return "error occured, check fileURL"}
 BPMAnalyzer.core.getBpmFrom(url, completion: nil)
 
