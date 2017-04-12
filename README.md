@@ -24,9 +24,9 @@ Powered with [Superpowered](http://superpowered.com)
 ```
 Example:
 ```swift
-  guard let filePath = Bundle.main.path(forResource: "TestMusic", ofType: "m4a"),
-            let url = URL(string: filePath) else {return "error occured, check fileURL"}
-        return BPMAnalyzer.core.getBpmFrom(url, completion: nil)
+let filePath = Bundle.main.path(forResource: "TestMusic", ofType: "m4a"),
+let url = URL(string: filePath) else {return "error occured, check fileURL"}
+BPMAnalyzer.core.getBpmFrom(url, completion: nil)
 
 ```
 
