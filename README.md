@@ -60,6 +60,7 @@ optional func mediaPicker(_ mediaPicker: MPMediaPickerController,
         }
 }
 ```
+### Look Example project in case of misunderstanding! :)
 
 ## WHY?
 Cause I can :D But in fact, I did't find any libs/frameworks to get BPM from media files...
