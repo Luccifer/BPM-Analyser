@@ -6,6 +6,9 @@
 Analyser BPM in Swift for your music/sounds/records, whatever..
 Powered with [Superpowered](http://superpowered.com)
 
+# Preview:
+![](https://github.com/Luccifer/BPM-Analyser/blob/master/preview.gif)
+
 # How To:
 
 ## Copy theese files to your project:
