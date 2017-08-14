@@ -38,9 +38,16 @@ You can stuck it with MPMediaPicker in delegate like this:
 import UIKit
 import MediaPlayer
 
-class YourClass: UIViewController {
+class YourClassViewController: UIViewController {
 
-    let mediaPicker: MPMediaPickerController = MPMediaPickerController(mediaTypes: .music)
+ let mediaPicker: MPMediaPickerController = MPMediaPickerController(mediaTypes: .music)
+    lazy var bpmLabel: UILabel = {
+        let label = UILabel()
+        label.frame.size.height = 300
+        label.frame.size.width = UIScreen.main.bounds.width - 32
+        label.numberOfLines = 2
+        return label
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,19 +56,28 @@ class YourClass: UIViewController {
         present(mediaPicker, animated: true, completion: nil)
         // Do any additional setup after loading the view, typically from a nib.
     }
+}
 
-extension YourClass: MPMediaPickerControllerDelegate{
+extension YourClassViewController: MPMediaPickerControllerDelegate {
 
-optional func mediaPicker(_ mediaPicker: MPMediaPickerController, 
-        didPickMediaItems mediaItemCollection: MPMediaItemCollection)
-        
+    func mediaPicker(_ mediaPicker: MPMediaPickerController, didPickMediaItems
+        mediaItemCollection: MPMediaItemCollection) {
         guard let asset = mediaItemCollection.items.first,
             let url = asset.assetURL else {return}
-        _ = BPMAnalyzer.core.getBpmFrom(url) { [weak self] (bpm) in
+        _ = BPMAnalyzer.core.getBpmFrom(url, completion: {[weak self] (bpm) in
+            self?.addLabelWith(bpm)
             self?.mediaPicker.dismiss(animated: true, completion: nil)
-            print(String(describing: bpm))
-        }
+        })
+    }
+    
+    func addLabelWith(_ bpm: String) {
+        bpmLabel.text = String(describing:bpm)
+        view.addSubview(bpmLabel)
+        bpmLabel.center = view.center
+        view.layoutIfNeeded()
+    }
 }
+
 ```
 ### Look Example project in case of misunderstanding! :)
 
