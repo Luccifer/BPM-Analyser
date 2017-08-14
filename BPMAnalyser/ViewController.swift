@@ -1,3 +1,4 @@
+
 //
 //  ViewController.swift
 //  BPMAnalyser
@@ -7,27 +8,45 @@
 //
 
 import UIKit
+import MediaPlayer
 
 class ViewController: UIViewController {
     
+    let mediaPicker: MPMediaPickerController = MPMediaPickerController(mediaTypes: .music)
+    lazy var bpmLabel: UILabel = {
+        let label = UILabel()
+        label.frame.size.height = 300
+        label.frame.size.width = UIScreen.main.bounds.width - 32
+        label.numberOfLines = 2
+        return label
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(String(describing: getTestBPM()))
+        mediaPicker.allowsPickingMultipleItems = false
+        mediaPicker.delegate = self
+        present(mediaPicker, animated: true, completion: nil)
         // Do any additional setup after loading the view, typically from a nib.
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func getTestBPM() -> String? {
-        guard let filePath = Bundle.main.path(forResource: "TestMusic", ofType: "m4a"),
-            let url = URL(string: filePath) else {return "error occured, check fileURL"}
-        var bpm: String?
-        bpm =  BPMAnalyzer.core.getBpmFrom(url, completion: nil)
-        return bpm
-    }
-    
 }
+
+extension ViewController: MPMediaPickerControllerDelegate {
+
+    func mediaPicker(_ mediaPicker: MPMediaPickerController, didPickMediaItems
+        mediaItemCollection: MPMediaItemCollection) {
+        guard let asset = mediaItemCollection.items.first,
+            let url = asset.assetURL else {return}
+        _ = BPMAnalyzer.core.getBpmFrom(url, completion: {[weak self] (bpm) in
+            self?.addLabelWith(bpm)
+            self?.mediaPicker.dismiss(animated: true, completion: nil)
+        })
+    }
+    
+    func addLabelWith(_ bpm: String) {
+        bpmLabel.text = String(describing:bpm)
+        view.addSubview(bpmLabel)
+        bpmLabel.center = view.center
+        view.layoutIfNeeded()
+    }
+}
+
