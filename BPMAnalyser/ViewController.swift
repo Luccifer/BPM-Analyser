@@ -25,8 +25,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         mediaPicker.allowsPickingMultipleItems = false
         mediaPicker.delegate = self
-        present(mediaPicker, animated: true, completion: nil)
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        present(mediaPicker, animated: true, completion: nil)
     }
 }
 
