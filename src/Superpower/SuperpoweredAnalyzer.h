@@ -16,8 +16,10 @@ public:
  @param samplerate The sample rate of the source.
  @param bpm If you know the accurate bpm value in advance, set it here. 0 means the analyzer will detect bpm.
  @param lengthSeconds The source's length in seconds.
+ @param minimumBpm Detected bpm will be more than or equal to this.
+ @param maximumBpm Detected bpm will be less than or equal to this.
  */
-    SuperpoweredOfflineAnalyzer(unsigned int samplerate, float bpm = 0, int lengthSeconds = 0);
+    SuperpoweredOfflineAnalyzer(unsigned int samplerate, float bpm = 0, int lengthSeconds = 0, float minimumBpm = 60.0f, float maximumBpm = 160.0f);
     ~SuperpoweredOfflineAnalyzer();
 
 /**
@@ -25,8 +27,9 @@ public:
 
  @param input 32-bit interleaved floating-point input.
  @param numberOfSamples How many samples to process.
+ @param lengthSeconds If the source's length may change, set this to it's current value, otherwise leave it at -1.
  */
-    void process(float *input, unsigned int numberOfSamples);
+    void process(float *input, unsigned int numberOfSamples, int lengthSeconds = -1);
 
 /**
  @brief Get results. Call this method ONCE, after all samples are processed.
@@ -44,7 +47,7 @@ public:
  @param loudpartsAverageDecibel The average loudness of the "loud" parts in the music in decibel. (Breakdowns and other quiet parts are excluded.)
  @param peakDecibel The loudest sample in decibel.
  @param bpm Beats per minute.
- @param beatgridStartMs The position where the beatgrid should start. Important! On input set it to 0, or the ms position of the first audio sample.
+ @param beatgridStartMs The position where the beatgrid starts. Important! On input set it to 0, or the ms position of the first audio sample.
  @param keyIndex The dominant key (chord) of the music. 0..11 are major keys from A to G#, 12..23 are minor keys from A to G#. Check the static constants in this header for musical, Camelot and Open Key notations.
  */
     void getresults(unsigned char **averageWaveform, unsigned char **peakWaveform, unsigned char **lowWaveform, unsigned char **midWaveform, unsigned char **highWaveform, unsigned char **notes, int *waveformSize, char **overviewWaveform, int *overviewSize, float *averageDecibel, float *loudpartsAverageDecibel, float *peakDecibel, float *bpm, float *beatgridStartMs, int *keyIndex);
@@ -110,8 +113,9 @@ public:
 
  @param input 32-bit interleaved floating-point input.
  @param numberOfSamples How many samples to process.
+ @param lengthSeconds If the source's length may change, set this to it's current value, otherwise leave it at -1.
 */
-    void process(float *input, unsigned int numberOfSamples);
+    void process(float *input, unsigned int numberOfSamples, int lengthSeconds = -1);
 
 /**
  @return Returns with 150 points/sec waveform data displaying the peak volume. Each sample is an unsigned char from 0 to 255. You take ownership on this (must free memory).
