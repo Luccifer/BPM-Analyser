@@ -89,7 +89,7 @@ Cause it is the [fastest lib I have found](http://superpowered.com)
 
 # Feel FREE to PR or contribuctions/issues/remarks
 
-# BUGS/Fixes Contributors:
+## BUGS/Fixes Contributors:
 @o1exij - for the advice and reseraching the bug in BPM counting
 
 @MikaTck - for alerting fatal error + Swift4 migration
